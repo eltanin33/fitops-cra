@@ -1,0 +1,79 @@
+{
+  "name": "jira",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.67",
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "@types/react-helmet": "^6.1.11",
+    "@welldone-software/why-did-you-render": "^7.0.1",
+    "antd": "5.2.0",
+    "dayjs": "^1.11.10",
+    "eslint-config-prettier": "^9.1.0",
+    "qs": "^6.11.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-query": "3.39.2",
+    "react-router": "^6.20.1",
+    "react-router-dom": "^6.20.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "mock-server": "json-server --watch __json_server_mock__/db.json --port 3001 --middlewares __json_server_mock__/middleware.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -r ${REPO_URL_ON_GITHUB} -b master"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "prettier"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@craco/craco": "^7.1.0",
+    "@craco/types": "^7.1.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/qs": "^6.9.12",
+    "gh-pages": "^6.1.1",
+    "husky": "^8.0.3",
+    "json-server": "^0.17.4",
+    "lint-staged": ">=10",
+    "msw": "^2.0.13",
+    "prettier": "3.1.0"
+  },
+  "lint-staged": {
+    "*.{js,css,md,ts,tsx}": "prettier --write"
+  }
+}
